@@ -11,8 +11,9 @@
         <local:MainPageViewModel />
     </Page.DataContext>
     
-    <Grid Padding="20">
+    <StackPanel Padding="20">
         <TextBlock Text="{Binding AppTitle}"
                    FontSize="64" />
-    </Grid>
+        <Button Content="Change text" Command="{Binding ChangeTextCommand}"/>
+    </StackPanel>
 </Page>
