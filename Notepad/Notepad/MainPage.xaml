@@ -12,8 +12,16 @@
     </Page.DataContext>
     
     <StackPanel Padding="20">
+        <ListView ItemsSource="{Binding Notes, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="x:String">
+                    <ListViewItem Content="{Binding}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <TextBlock Text="{Binding AppTitle}"
                    FontSize="64" />
-        <Button Content="Change text" Command="{Binding ChangeTextCommand}"/>
+        <Button Content="Change text"
+                Command="{Binding ChangeTextCommand}" />
     </StackPanel>
 </Page>
